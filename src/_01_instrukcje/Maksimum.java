@@ -2,7 +2,7 @@ package _01_instrukcje;
 
 public class Maksimum {
 	public static void main(String[] args) {
-		int a = 1, b = 3;
+		int a = 1, b = 1, c = 1;
 		int w = 0;
 
 		if (a > b) {
@@ -10,6 +10,10 @@ public class Maksimum {
 		} else {
 			w = b;
 		}
+		if (w <= c) {
+			w = c;
+		}
+
 		System.out.println(w);
 	}
 }
