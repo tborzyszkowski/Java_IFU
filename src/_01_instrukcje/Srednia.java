@@ -1,12 +1,11 @@
 package _01_instrukcje;
 
-public class Suma {
-
+public class Srednia {
 	public static void main(String[] args) {
-		int a = 11;
+		int a = 10;
 		int b = 23;
-		int w = a + b;
-		
+		double w = (a + b) / 2.0;
+
 		System.out.println("Wynik:" + w);
 	}
 }
