@@ -1,0 +1,4 @@
+Narysuj schemat blokowy i napisz program obliczający dla zadanego n:
+a) sumę 1+2+...+n
+b) sprawdzi czy n jest liczbą pierwszą
+c) sprawdzi czy n jest kwadratem liczby całkowitej

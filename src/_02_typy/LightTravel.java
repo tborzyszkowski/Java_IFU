@@ -5,7 +5,7 @@ package _02_typy;
 class Light {
 	public static void main(String[] args) {
 		int lightSpeed = 299792; // km/s
-		long days = 1000;        // badana liczba dni
+		long days = 1000*1000*1000;        // badana liczba dni
 		long seconds = days * 24 * 60 * 60;   // tyle to sekund
 		long distance = lightSpeed * seconds; // tyle przebedzie swiatlo
 
@@ -14,10 +14,12 @@ class Light {
 		System.out.print(" dni swiatlo przebedzie okolo ");
 		System.out.println(distance + " kilometrow");
 
-		seconds = Long.MAX_VALUE / lightSpeed;
-		days = seconds / (24 * 60 * 60);
+//		seconds = Long.MAX_VALUE / lightSpeed;
+//		days = seconds / (24 * 60 * 60);
+//
+//		System.out.println("Sec = " + seconds + " Dni = " + days + " Lat = " + days / 365);
 
-		System.out.println("Sec = " + seconds + " Dni = " + days + " Lat = " + days / 365);
+		System.out.println(Math.multiplyExact(lightSpeed, seconds));
 
 	}
 }
