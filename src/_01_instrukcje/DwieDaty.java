@@ -46,5 +46,16 @@ public class DwieDaty {
 								System.out.println("D2");
 							else
 								System.out.println("==");
+
+		int data_1 = d1_r * 10000 + d1_m * 100 + d1_d;
+		int data_2 = d2_r * 10000 + d2_m * 100 + d2_d;
+
+		if (data_1 > data_2)
+			System.out.println("D2");
+		else if (data_1 < data_2)
+			System.out.println("D1");
+			else
+				System.out.println("==");
+
 	}
 }
