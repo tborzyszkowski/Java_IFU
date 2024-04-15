@@ -3,7 +3,7 @@ package _01_instrukcje;
 public class Silnia {
 
 	public static void main(String[] args) {
-		int n = 24;
+		int n = 10;
 		int i = 0;
 		long s = 1;
 		
