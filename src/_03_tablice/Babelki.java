@@ -3,7 +3,7 @@ package _03_tablice;
 public class Babelki {
 	public static void main(String[] args) {
 		int n = 100000;
-		int t[] = new int[n];
+		int[] t = new int[n];
 		int zakres = 100000;
 		int pom;
 		

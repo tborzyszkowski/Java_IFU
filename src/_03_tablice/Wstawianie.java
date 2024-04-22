@@ -4,7 +4,7 @@ public class Wstawianie {
 
 	public static void main(String[] args) {
 		int n = 10;
-		int t[] = new int[n];
+		int[] t = new int[n];
 		int zakres = 100;
 		int pom, j;
 		

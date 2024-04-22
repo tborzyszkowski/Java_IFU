@@ -7,7 +7,7 @@ public class GdzieB11 {
 
 	public static void main(String[] args) {
 		int n = 10000000;
-		int t[] = new int[n];
+		int[] t = new int[n];
 		int zakres = 10000000;
 		
 		// wypelniamy 

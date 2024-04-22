@@ -4,7 +4,7 @@ public class Wybieranie {
 
 	public static void main(String[] args) {
 		int n = 10;
-		int t[] = new int[n];
+		int[] t = new int[n];
 		int zakres = 10000;
 		int pom, k;
 		
@@ -24,9 +24,9 @@ public class Wybieranie {
 					k = j;
 					pom = t[j];
 				}
-				pom = t[k];
-				t[k] = t[i];
-				t[i] = pom;
+			pom = t[k];
+			t[k] = t[i];
+			t[i] = pom;
 			for(int j = 0; j < n; j ++) System.out.print(t[j]+ "\t");
 			System.out.println();
 		}

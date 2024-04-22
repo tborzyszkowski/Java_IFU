@@ -4,7 +4,7 @@ public class Gdzie2 {
 
 	public static void main(String[] args) {
 		int n = 10000000;
-		int t[] = new int[n];
+		int[] t = new int[n];
 		int zakres = 10000000;
 		
 		// wypelniamy 
@@ -15,7 +15,7 @@ public class Gdzie2 {
 		long time1 = System.currentTimeMillis(); // czas poczatkowy
 		int to = 13; // tego szukamy
 		int i = -1;
-		boolean w[] = new boolean[n]; // tu wynik poszukiwan
+		var w = new boolean[n]; // tu wynik poszukiwan
 		int jest = 0; // zliczamy wystapienia
 		
 		while(i < n-1){

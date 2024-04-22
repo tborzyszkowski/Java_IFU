@@ -4,7 +4,7 @@ public class Duze2 {
 
 	public static void main(String[] args) {
 		int n = 10000;
-		Obywatel t[] = new Obywatel[n];
+		Obywatel[] t = new Obywatel[n];
 		int zakres = 10000;
 		int pom;
 		int j;
@@ -15,7 +15,7 @@ public class Duze2 {
 			t[i] = new Obywatel("AAA"+j, "BBB"+j, "CCC"+j, j, "DDD"+j, j%2==0, j/2);
 		}
 		// tablica indeksow elementow z t[]
-		int ind[] = new int[n];
+		int[] ind = new int[n];
 		for(int i = 0; i < n; i++) ind[i] = i;
 		
 		//sortowanie

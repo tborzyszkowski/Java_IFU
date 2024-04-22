@@ -24,11 +24,11 @@ class Obywatel{
 	}
 	
 	void kopiuj(Obywatel o){
-		imie = new String(o.imie);
-		nazwisko = new String(o.nazwisko);
-		stanowisko = new String(o.stanowisko);
+		imie = o.imie;
+		nazwisko = o.nazwisko;
+		stanowisko = o.stanowisko;
 		wiek = o.wiek;
-		adres = new String(o.adres);
+		adres = o.adres;
 		plec = o.plec;
 		nrButa = o.nrButa;
 	}
@@ -40,7 +40,7 @@ public class Duze1 {
 
 	public static void main(String[] args) {
 		int n = 10000;
-		Obywatel t[] = new Obywatel[n];
+		Obywatel[] t = new Obywatel[n];
 		int zakres = 10000;
 		Obywatel pom = new Obywatel();
 		int j;
