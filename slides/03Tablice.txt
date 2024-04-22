@@ -1,0 +1,19 @@
+Tablice
+=========
+
+Zadanie 1
+----------
+Napisz program, który wypełni tablicę napisów imionami podanymi w programie:
+a) najdłuższe imie
+b) najkrótsze imie
+*c) powtarzające się imiona wraz z ich krotnościami
+
+Zadanie 2
+----------
+Napisz program, który utworzy tablicę trójkątną i wypełni ją liczbami tworzącymi trojkąt Pascala.
+
+Zadanie 3
+----------
+Napisać program wypełniający n elementową tablicę liczbową kolejnymi:
+a) liczbami ciągu Fibonacciego
+*b) liczbami pierwszymi
