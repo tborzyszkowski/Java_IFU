@@ -1,0 +1,18 @@
+Zadania Procedury
+-------------------
+Zadanie 1
+---------
+Rozszerz klase Osoba z wykladu o pola zarobki i date urodzenia.
+A) Uzupełnij procedury set i get by umożliwić dostęp do nowych pol.
+B) Napisz funkcje oddajace aktualny wiek i podwyzszajace / obnizajace
+   zarobki o zadany procent.
+
+Zadanie 2
+---------
+Napisz klase wyposazona w odpowiednie funkcje pozwalajace wyliczac 
+wartosc bezwzgledna zadanego argumentu bez zmiany jego typu wynikowego.
+
+Zadanie 3
+---------
+Stworz klasy testujace "boxing" i "unboxing" 
+dla pozostałych typów prostych (poza int).

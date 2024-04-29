@@ -1,17 +1,15 @@
 package _04_procedury;
 
-import org.omg.CORBA.*;
-
 class Liczba{
-	int i;
-	Liczba(int a){
-		i = a;
+	private int liczba;
+	Liczba(int liczba){
+		setLiczba(liczba);
 	}
-	void setI(int a){
-		i = a;
+	void setLiczba(int liczba){
+		this.liczba = liczba;
 	}
-	int getI(){
-		return i;
+	int getLiczba(){
+		return liczba;
 	}
 }
 public class Boxing {
@@ -19,26 +17,23 @@ public class Boxing {
 		i++;
 	}
 	static void op(Integer i){
-		i = new Integer(i.intValue()+1);
-	}
-	static void op(IntHolder i){
-		i.value++;
+		i = i.intValue() + 1;
 	}
 	static void op(Liczba i){
-		i.setI(i.getI()+1);
+		i.setLiczba(i.getLiczba()+1);
 	}
-	
+
 	public static void main(String[] args) {
 
-		int i = 5;
-		Integer II = new Integer(i);
-		IntHolder III = new IntHolder(i);
-		Liczba licz = new Liczba(i);
-		op(i);
-		op(II);
-		op(III);
-		op(licz);
-		System.out.println("i = "+ i + "\nii = " + II + "\nIII = " + III.value+"\nlicz = "+ licz.getI());
+		int intLiczba = 5;
+		Integer integerLiczba = intLiczba;
+		Liczba liczba = new Liczba(intLiczba);
+		op(intLiczba);
+		op(integerLiczba);
+		op(liczba);
+		System.out.println("intLiczba = "+ intLiczba);
+		System.out.println("integerLiczba = " + integerLiczba);
+		System.out.println("liczba = "+ liczba.getLiczba());
 	}
 
 }

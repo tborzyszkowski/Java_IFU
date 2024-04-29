@@ -7,26 +7,26 @@ class Osoba{
 	private String nazwisko;
 	private int rok;
 	
-	void setImie(String im){
-		imie = im;
+	public void setImie(String imie){
+		this.imie = imie;
 	}
-	void setNazwisko(String naz){
-		nazwisko = naz;
+	public void setNazwisko(String nazwisko){
+		this.nazwisko = nazwisko;
 	}
-	void setRok(int r){
-		rok = r;
+	public void setRok(int rok){
+		this.rok = rok;
 	}
-	String getImie(){
+	public String getImie(){
 		return imie;
 	}
-	String getNazwisko(){
+	public String getNazwisko(){
 		return nazwisko;
 	}
-	int getRok(){
+	public int getRok(){
 		return rok;
 	}
 	public String toString(){
-		return "[" + imie + " " + nazwisko + " " + (2009 - rok)+ "]";
+		return "[" + imie + " " + nazwisko + " " + (2024 - rok)+ "]";
 	}
 }
 
@@ -39,7 +39,7 @@ public class NowaKlasa {
 		os.setNazwisko("Kowalska");
 		os.setRok(1989);
 		
-		System.out.println("Imi� : "+os.getImie() + " Nazwisko : " + os.getNazwisko()+
+		System.out.println("Imie : "+os.getImie() + " Nazwisko : " + os.getNazwisko()+
 				"Rok : " + os.getRok());
 		System.out.println(os);
 	}
