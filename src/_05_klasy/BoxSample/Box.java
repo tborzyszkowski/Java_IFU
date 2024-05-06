@@ -12,6 +12,14 @@ public class Box {
 		this(0.0, 0.0, 0.0);
 	}
 
+	public Box(BoxWeight ob) {
+		this(ob.getWidth(), ob.getHeight(), ob.getDepth());
+	}
+
+	public Box(int n) {
+		this(n, n, n);
+	}
+
 	public double getWidth() {
 		return width;
 	}
@@ -36,7 +44,7 @@ public class Box {
 		this.depth = depth;
 	}
 
-	private void setDim(double width, double height, double depth) {
+	void setDim(double width, double height, double depth) {
 		this.width = width;
 		this.height = height;
 		this.depth = depth;
@@ -74,4 +82,8 @@ public class Box {
 	//	public static int getValue(int argument){
 	//		return argument + 1;
 	//	}
+	public String toString() {
+		return  "Box { Objetosc = " + this.volume() + " }";
+	}
+
 }
