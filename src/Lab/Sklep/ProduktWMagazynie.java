@@ -1,13 +1,13 @@
 package Lab.Sklep;
 
-public class Produkt {
+public class ProduktWMagazynie {
 	private int identyfikator;
 	private String nazwa;
 	private String opis;
 	private int sztuki;
 	private double cena;
 
-	public Produkt(int identyfikator, String nazwa, String opis, int sztuki, double cena) {
+	public ProduktWMagazynie(int identyfikator, String nazwa, String opis, int sztuki, double cena) {
 		this.identyfikator = identyfikator;
 		this.nazwa = nazwa;
 		this.opis = opis;
