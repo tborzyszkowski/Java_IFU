@@ -1,5 +1,6 @@
 package Lab.Sklep;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Zamowienie {
@@ -55,5 +56,17 @@ public class Zamowienie {
 
 	public void setStan(String stan) {
 		this.stan = stan;
+	}
+
+	public double getKwotaZamowienia(){
+		double sumaZamowienia = 0.0;
+		for (ElementZamowienia e : elementyZamowienia) {
+			sumaZamowienia += e.getSztuki() * e.getCena();
+		}
+		return sumaZamowienia;
+	}
+	public Zamowienie addElementZamowienia(ElementZamowienia elementZamowienia){
+		this.elementyZamowienia.add(elementZamowienia);
+		return this;
 	}
 }
