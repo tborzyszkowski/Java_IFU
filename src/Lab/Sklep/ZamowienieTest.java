@@ -36,9 +36,12 @@ public class ZamowienieTest {
 				"58 123456",
 				"kazik@wp.pl",
 				"nowy");
+		Magazyn magazyn = new Magazyn(new ArrayList<>());
+		magazyn.addProduct(produktLaptop).addProduct(produktTelefon);
 		Zamowienie zamowienie =
 				new Zamowienie(111,
 						klient,
+						magazyn,
 						"ul. Dluga 1, Gdansk",
 						new ArrayList<>(),
 						"zaplacone");
@@ -50,4 +53,37 @@ public class ZamowienieTest {
 
 		assertEquals(3400, sumaZamowienia, 0.001);
 	}
+
+	@Test
+	void test_zakup_jezeli_jest_w_magazynie() {
+		ProduktWMagazynie produktLaptop =
+				new ProduktWMagazynie(1,
+						"Laptop",
+						"dobry",
+						1,
+						2000
+				);
+		ElementZamowienia elementZamowieniaLaptop =
+				new ElementZamowienia(produktLaptop,
+						2,
+						1800);
+		Klient klient = new Klient(1,
+				"58 123456",
+				"kazik@wp.pl",
+				"nowy");
+		Magazyn magazyn = new Magazyn(new ArrayList<>());
+		magazyn.getProduktyWMagazynie().add(produktLaptop);
+		Zamowienie zamowienie =
+				new Zamowienie(111,
+						klient,
+						magazyn,
+						"ul. Dluga 1, Gdansk",
+						new ArrayList<>(),
+						"zaplacone");
+		zamowienie.addElementZamowienia(elementZamowieniaLaptop);
+
+		boolean result = zamowienie.getElementyZamowienia().contains(elementZamowieniaLaptop);
+		assertFalse(result);
+	}
+
 }

@@ -1,18 +1,19 @@
 package Lab.Sklep;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Zamowienie {
 	private int identyfikator;
 	private Klient klient;
+	private Magazyn magazyn;
 	private String adresDostawy;
 	private List<ElementZamowienia> elementyZamowienia;
 	private String stan;
 
-	public Zamowienie(int identyfikator, Klient klient, String adresDostawy, List<ElementZamowienia> elementyZamowienia, String stan) {
+	public Zamowienie(int identyfikator, Klient klient, Magazyn magazyn, String adresDostawy, List<ElementZamowienia> elementyZamowienia, String stan) {
 		this.identyfikator = identyfikator;
 		this.klient = klient;
+		this.magazyn = magazyn;
 		this.adresDostawy = adresDostawy;
 		this.elementyZamowienia = elementyZamowienia;
 		this.stan = stan;
@@ -24,6 +25,14 @@ public class Zamowienie {
 
 	public void setIdentyfikator(int identyfikator) {
 		this.identyfikator = identyfikator;
+	}
+
+	public Magazyn getMagazyn() {
+		return magazyn;
+	}
+
+	public void setMagazyn(Magazyn magazyn) {
+		this.magazyn = magazyn;
 	}
 
 	public Klient getKlient() {
@@ -66,7 +75,13 @@ public class Zamowienie {
 		return sumaZamowienia;
 	}
 	public Zamowienie addElementZamowienia(ElementZamowienia elementZamowienia){
-		this.elementyZamowienia.add(elementZamowienia);
+		ProduktWMagazynie produkt = magazyn.findProduktWMagazynie(elementZamowienia.getProdukt().getIdentyfikator());
+		if (produkt != null) {
+			if (elementZamowienia.getSztuki() <= produkt.getSztuki()) {
+				produkt.setSztuki(produkt.getSztuki() - elementZamowienia.getSztuki());
+				this.elementyZamowienia.add(elementZamowienia);
+			}
+		}
 		return this;
 	}
 }
