@@ -1,4 +1,4 @@
-package Lab.Sklep;
+package Lab.Sklep.Model;
 
 import java.util.List;
 

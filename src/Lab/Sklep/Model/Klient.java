@@ -1,4 +1,4 @@
-package Lab.Sklep;
+package Lab.Sklep.Model;
 
 public class Klient {
 	private int identyfikator;

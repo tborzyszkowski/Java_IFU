@@ -1,4 +1,4 @@
-package Lab.Sklep;
+package Lab.Sklep.Model;
 
 import java.util.List;
 
@@ -27,5 +27,15 @@ public class Magazyn {
 	public Magazyn addProduct(ProduktWMagazynie p) {
 		this.produktyWMagazynie.add(p);
 		return this;
+	}
+
+	@Override
+	public String toString() {
+		final StringBuffer sb = new StringBuffer("Magazyn:");
+		for(var produkt : produktyWMagazynie){
+			sb.append('\n').append(produkt);
+		}
+		sb.append('\n');
+		return sb.toString();
 	}
 }

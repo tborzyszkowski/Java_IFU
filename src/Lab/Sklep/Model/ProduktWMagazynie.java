@@ -1,4 +1,4 @@
-package Lab.Sklep;
+package Lab.Sklep.Model;
 
 public class ProduktWMagazynie {
 	private int identyfikator;
@@ -59,5 +59,17 @@ public class ProduktWMagazynie {
 			this.cena = cena;
 		else
 			this.cena = 0.0;
+	}
+
+	@Override
+	public String toString() {
+		final StringBuffer sb = new StringBuffer("ProduktWMagazynie{");
+		sb.append("id=").append(identyfikator);
+		sb.append(", nazwa='").append(nazwa).append('\'');
+		sb.append(", opis='").append(opis).append('\'');
+		sb.append(", sztuki=").append(sztuki);
+		sb.append(", cena=").append(cena);
+		sb.append('}');
+		return sb.toString();
 	}
 }
