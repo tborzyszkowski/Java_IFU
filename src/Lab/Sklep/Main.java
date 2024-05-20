@@ -1,10 +1,11 @@
 package Lab.Sklep;
 
+import Lab.Sklep.Model.Klient;
 import Lab.Sklep.Model.Magazyn;
 import Lab.Sklep.Model.ProduktWMagazynie;
 import Lab.Sklep.View.ProduktWMagazynieView;
 
-import java.util.ArrayList;
+import java.util.*;
 import java.util.Scanner;
 
 public class Main {
@@ -15,10 +16,12 @@ public class Main {
 		do {
 			System.out.println("1. Dodaj produkt do magazynu");
 			System.out.println("2. Wypisz magazyn");
+			System.out.println("3. Dodaj klienta");
+			System.out.println("4. Wypisz klienta");
 			System.out.println("0. Wyjscie");
 			System.out.println("\tWybierz opcje: ");
 			wybor = scanner.nextInt();
-		} while (wybor < 0 || wybor > 3);
+		} while (wybor < 0 || wybor > 4);
 		return wybor;
 	}
 
@@ -26,6 +29,7 @@ public class Main {
 
 		Scanner scanner = new Scanner(System.in);
 		Magazyn magazyn = new Magazyn(new ArrayList<>());
+		List<Klient> klienci = new ArrayList<>();
 
 		int wybor = 0;
 		boolean czyWyjscie = false;
@@ -42,6 +46,12 @@ public class Main {
 				case 2:
 					System.out.println("Wypisz magazyn:");
 					System.out.println(magazyn);
+					break;
+				case 3:
+					System.out.println("Dodaj klienta:");
+					break;
+				case 4:
+					System.out.println("Wypisz klienta:");
 					break;
 				case 0:
 					System.out.println("Wyjscie");
