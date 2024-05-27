@@ -3,7 +3,7 @@ package Lab;
 import java.io.*;
 import java.util.*;
 
-class Pracownik {
+public class Pracownik {
 	private String nazwisko;
 	private double pensja;
 	private Date dzienZatrudnienia;
@@ -46,7 +46,6 @@ class Pracownik {
 				+ "]";
 	}
 
-
 	public void zapiszDane(PrintWriter wy) throws IOException {
 		GregorianCalendar kalendarz = new GregorianCalendar();
 		kalendarz.setTime(dzienZatrudnienia);
@@ -57,11 +56,6 @@ class Pracownik {
 				+ kalendarz.get(Calendar.DAY_OF_MONTH));
 	}
 
-	/**
-	 * Pobiera dane pracownika z buforowanego obiektu odczytu
-	 *
-	 * @param we buforowany obiekt odczytu
-	 */
 	public void czytajDane(BufferedReader we) throws IOException {
 		String s = we.readLine();
 		StringTokenizer t = new StringTokenizer(s, "|");
@@ -72,7 +66,6 @@ class Pracownik {
 		int d = Integer.parseInt(t.nextToken());
 		GregorianCalendar kalendarz
 				= new GregorianCalendar(y, m - 1, d);
-		// GregorianCalendar zaczyna liczenie miesi�cy od 0
 		dzienZatrudnienia = kalendarz.getTime();
 	}
 }

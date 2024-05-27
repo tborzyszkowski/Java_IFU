@@ -1,5 +1,10 @@
 package Lab.Sklep.Model;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.StringTokenizer;
+
 public class ProduktWMagazynie {
 	private int identyfikator;
 	private String nazwa;
@@ -72,4 +77,24 @@ public class ProduktWMagazynie {
 		sb.append('}');
 		return sb.toString();
 	}
+
+	public void zapiszDane(PrintWriter wy) throws IOException {
+		wy.println(identyfikator + "|"
+						+ nazwa + "|"
+						+ opis + "|"
+						+ sztuki + "|"
+						+ cena
+				);
+	}
+
+	public static ProduktWMagazynie czytajDane(String s) throws IOException {
+		StringTokenizer t = new StringTokenizer(s, "|");
+		int id = Integer.parseInt(t.nextToken());
+		String nazwaProduktu = t.nextToken();
+		String opisProduktu = t.nextToken();
+		int liczbaSztuk = Integer.parseInt(t.nextToken());
+		double cenaProduktu = Double.parseDouble(t.nextToken());
+		return new ProduktWMagazynie(id, nazwaProduktu, opisProduktu, liczbaSztuk, cenaProduktu);
+	}
+
 }
