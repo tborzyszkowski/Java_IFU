@@ -3,6 +3,7 @@ package Lab.Sklep;
 import Lab.Sklep.Model.Klient;
 import Lab.Sklep.Model.Magazyn;
 import Lab.Sklep.Model.ProduktWMagazynie;
+import Lab.Sklep.View.KlientView;
 import Lab.Sklep.View.ProduktWMagazynieView;
 
 import java.util.*;
@@ -17,7 +18,7 @@ public class Main {
 			System.out.println("1. Dodaj produkt do magazynu");
 			System.out.println("2. Wypisz magazyn");
 			System.out.println("3. Dodaj klienta");
-			System.out.println("4. Wypisz klienta");
+			System.out.println("4. Wypisz klientow");
 			System.out.println("0. Wyjscie");
 			System.out.println("\tWybierz opcje: ");
 			wybor = scanner.nextInt();
@@ -29,7 +30,7 @@ public class Main {
 
 		Scanner scanner = new Scanner(System.in);
 		Magazyn magazyn = new Magazyn(new ArrayList<>());
-		List<Klient> klienci = new ArrayList<>();
+		List<Klient> listaKlientow = new ArrayList<>();
 
 		int wybor = 0;
 		boolean czyWyjscie = false;
@@ -49,9 +50,15 @@ public class Main {
 					break;
 				case 3:
 					System.out.println("Dodaj klienta:");
+					listaKlientow.add(
+							KlientView.KlientUserInput(scanner)
+					);
 					break;
 				case 4:
-					System.out.println("Wypisz klienta:");
+					System.out.println("Wypisz klientow:");
+					for (Klient klient : listaKlientow) {
+						System.out.println(klient);
+					}
 					break;
 				case 0:
 					System.out.println("Wyjscie");

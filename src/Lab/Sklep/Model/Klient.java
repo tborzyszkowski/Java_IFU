@@ -4,13 +4,13 @@ public class Klient {
 	private int identyfikator;
 	private String telefon;
 	private String email;
-	private String statu;
+	private String status;
 
 	public Klient(int identyfikator, String telefon, String email, String statu) {
 		this.identyfikator = identyfikator;
 		this.telefon = telefon;
 		this.email = email;
-		this.statu = statu;
+		this.status = statu;
 	}
 
 	public int getIdentyfikator() {
@@ -37,11 +37,22 @@ public class Klient {
 		this.email = email;
 	}
 
-	public String getStatu() {
-		return statu;
+	public String getStatus() {
+		return status;
 	}
 
-	public void setStatu(String statu) {
-		this.statu = statu;
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	@Override
+	public String toString() {
+		final StringBuffer sb = new StringBuffer("Klient{");
+		sb.append("id=").append(identyfikator);
+		sb.append(", telefon='").append(telefon).append('\'');
+		sb.append(", email='").append(email).append('\'');
+		sb.append(", status='").append(status).append('\'');
+		sb.append('}');
+		return sb.toString();
 	}
 }
