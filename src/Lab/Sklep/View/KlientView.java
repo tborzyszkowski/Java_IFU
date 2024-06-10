@@ -2,6 +2,7 @@ package Lab.Sklep.View;
 
 import Lab.Sklep.Model.Klient;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class KlientView {
@@ -12,6 +13,7 @@ public class KlientView {
 	private static int getNextID(){
 		return nextID++;
 	}
+
 	public static Klient KlientUserInput(Scanner scanner) {
 		System.out.print("Telefon: ");
 		String telefon = scanner.nextLine();
@@ -27,5 +29,12 @@ public class KlientView {
 				email,
 				status
 			);
+	}
+	public static Klient findKlientById(int idKlienta, List<Klient> listaKlientow){
+		return listaKlientow
+				.stream()
+				.filter(k -> k.getIdentyfikator() == idKlienta)
+				.findFirst()
+				.orElse(null);
 	}
 }
